@@ -1,16 +1,31 @@
-# React + Vite
+# Tutoring Test Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About this project
+This is a simple **static website** built with **React** and **Vite** for observing how tutors manage tutoring sessions.  
+Purpose: let test users perform tasks and capture their workflows, choices, and workarounds.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Fully static, no backend
+- Simulates:
+  - Scheduling lessons
+  - Adding lessons to the LMS
+  - Editing/deleting lessons
+  - Reporting absences
+  - Other situations / edge cases
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation
 
-## Expanding the ESLint configuration
+1. Clone this project or download it as a zip
+2. Open the folder in **VS Code**
+3. Open a terminal and run:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+4. Open your browser at http://localhost:5173
