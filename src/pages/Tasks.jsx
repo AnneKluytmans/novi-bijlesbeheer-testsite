@@ -1,28 +1,25 @@
-import { Link } from "react-router-dom";
+import { tasks } from '../data/tasks'
+import { Link } from 'react-router-dom'
 
 export default function Tasks() {
   return (
-    <div className="container">
-      <h1>Taken</h1>
+    <div>
+        <h1>Taken</h1>
 
-      <p>
-        Hieronder staat een overzicht van de verschillende taken. Klik op een taak om deze te verkennen. 
-      </p>
+        <h3>
+            Hieronder staat een overzicht van de verschillende taken. 
+        </h3>
 
-      <div className="task-list">
-        <Link to="/basisschool/context">
-          Les plannen (basisschool)
-        </Link>
-        <Link to="/middelbare/context">
-          Les plannen (middelbare)
-        </Link>
-        <Link to="/lvs/context">
-          Les in LVS zetten
-        </Link>
-        <Link to="/overige">
-          Overige situaties
-        </Link>
-      </div>
+        {tasks.map((task) => (
+            <div key={task.id} style={{ marginBottom: "20px" }}>
+                <h3>{task.title}</h3>
+                <p>{task.description}</p>
+
+                <Link to={`/task/${task.id}`}>
+                    <button>Start taak</button>
+                </Link>
+            </div>
+        ))}
     </div>
   );
 }
