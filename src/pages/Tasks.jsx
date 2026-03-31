@@ -13,7 +13,6 @@ export default function Tasks() {
         {tasks.map((task) => (
             <div key={task.id} style={{ marginBottom: "20px" }}>
                 <h3>{task.title}</h3>
-                <p>{task.description}</p>
 
                 <Link to={`/task/${task.id}`}>
                     <button>Start taak</button>

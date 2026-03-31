@@ -1,69 +1,83 @@
-import { useParams } from 'react-router-dom'
-import { useState } from 'react'
-import { tasks } from '../data/tasks'
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { tasks } from "../data/tasks";
+import { simulationComponents } from "../components/simulations";
 
 export default function TaskFlow() {
   const { id } = useParams();
   const task = tasks.find((t) => t.id === id);
 
-  const [step, setStep] = useState(0);
+  const [stepIndex, setStepIndex] = useState(0);
+  const [selected, setSelected] = useState(null);
 
   if (!task) return <p>Taak niet gevonden</p>;
+
+  const step = task.steps[stepIndex];
+
+  const next = () => {
+    setSelected(null);
+    setStepIndex(stepIndex + 1);
+  };
 
   return (
     <div>
       <h2>{task.title}</h2>
 
-      {step === 0 && (
-        <div>
-          <p>
-            Je hebt net een bijles gegeven. Plan een nieuwe afspraak.
-          </p>
-
-          <button onClick={() => setStep(1)}>Volgende</button>
-        </div>
+      {/* INTRO */}
+      {step?.type === "intro" && (
+        <>
+          <p>{step.content}</p>
+          <button onClick={next}>Volgende</button>
+        </>
       )}
 
-      {step === 1 && (
-        <div>
-          <h3>Hoe pak je dit aan?</h3>
+      {/* SIMULATION */}
+      {step?.type === "simulation" && (
+        <>
+          {(() => {
+            const Sim = simulationComponents[step.component];
+            return <Sim />;
+          })()}
 
-          <button>Mondeling tijdens les</button>
-          <button>Via WhatsApp/email met de ouder</button>
-          <button>Via WhatsApp/email met de leerling</button>
-          <button>Vast moment plannen</button>
-          <button>Wisselend, afhankelijk van de klant wil</button>
-          <button>Anders, namelijk...</button>
-
-          <br /><br />
-
-          <button onClick={() => setStep(2)}>Volgende</button>
-        </div>
+          <button onClick={next}>Volgende</button>
+        </>
       )}
 
-      {step === 2 && (
-        <div>
-          <h3>Reflectie</h3>
+      {/* CHOICES */}
+      {step?.type === "choices" && (
+        <>
+          <h3>{step.question}</h3>
 
-          <p>Waarom kies je hiervoor?</p>
+          {step.options.map((opt) => (
+            <button
+              key={opt}
+              onClick={() => setSelected(opt)}
+              className={selected === opt ? "selected" : ""}
+            >
+              {opt}
+            </button>
+          ))}
 
-          <textarea rows="4" style={{ width: "100%" }} />
-
-          <br /><br />
-
-          <p>Werkt dit goed?</p>
-
-          <textarea rows="4" style={{ width: "100%" }} />
-
-          <button onClick={() => setStep(3)}>Afronden</button>
-        </div>
+          <br />
+          <button onClick={next}>Volgende</button>
+        </>
       )}
 
-      {step === 3 && (
-        <div>
+      {/* REFLECTION */}
+      {step?.type === "reflection" && (
+        <>
+          <h3>{step.question}</h3>
+          <textarea rows="4" />
+          <button onClick={next}>Afronden</button>
+        </>
+      )}
+
+      {/* EINDE */}
+      {stepIndex >= task.steps.length && (
+        <>
           <h3>Klaar ✅</h3>
           <p>Ga terug naar de takenlijst.</p>
-        </div>
+        </>
       )}
     </div>
   );
