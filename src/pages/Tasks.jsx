@@ -6,9 +6,9 @@ export default function Tasks() {
     <div>
         <h1>Taken</h1>
 
-        <h3>
+        <h4>
             Hieronder staat een overzicht van de verschillende taken. 
-        </h3>
+        </h4>
 
         {tasks.map((task) => (
             <div key={task.id} style={{ marginBottom: "20px" }}>

@@ -1,5 +1,5 @@
 body {
-  background: #b8ddd3;
+  background: #e88d43;
   margin: 0;
 }
 
@@ -45,7 +45,7 @@ li {
 .section {
   margin-top: 24px;
   padding: 16px;
-  background: #f9f9f9;
+  background: #f2f0f0;
   border-radius: 6px;
 }
 
@@ -58,8 +58,8 @@ li {
 }
 
 .important {
-  background: #fff4f4;
-  border: 1px solid #ffd6d6;
+  background: #fff3e7;
+  border: 1.5px solid #efb381;
 }
 
 .primary-button {

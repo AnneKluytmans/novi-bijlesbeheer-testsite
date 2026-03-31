@@ -191,5 +191,34 @@ export const tasks = [
         question: "Wat werkt hier niet goed voor jou?"
       }
     ]
+  },
+    // ❌ 6. Leerling afwezig melden
+  {
+    id: "afwezig",
+    title: "Leerling afwezig melden",
+    steps: [
+      {
+        type: "intro",
+        content: "Meld een leerling afwezig in het lvs"
+      },
+      {
+        type: "simulation",
+        component: "LVSSim"
+      },
+      {
+        type: "choices",
+        question: "Wanneer meld je de leerling afwezig?",
+        options: [
+          "Direct",
+          "Aan het einde van de dag",
+          "Later in de week",
+          "Wisselend"
+        ]
+      },
+      {
+        type: "reflection",
+        question: "Wat werkt hier niet goed voor jou?"
+      }
+    ]
   }
 ];
