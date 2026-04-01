@@ -49,7 +49,7 @@ export default function Home() {
 
       <button 
         className="primary-button"
-        onClick={() => navigate("/tasks")}
+        onClick={() => navigate("/taken")}
       >
         Start
       </button>

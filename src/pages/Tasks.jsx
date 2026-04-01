@@ -14,7 +14,7 @@ export default function Tasks() {
             <div key={task.id} style={{ marginBottom: "20px" }}>
                 <h3>{task.title}</h3>
 
-                <Link to={`/task/${task.id}`}>
+                <Link to={`/taak/${task.id}/context`}>
                     <button>Start taak</button>
                 </Link>
             </div>

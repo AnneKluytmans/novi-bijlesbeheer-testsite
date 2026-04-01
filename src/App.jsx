@@ -3,42 +3,42 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import Tasks from './pages/Tasks'
 
-import Task1Context from "../pages/task1/Task1Context";
-import Task1Simulation from "../pages/task1/Task1Simulation";
-import Task1EdgeCases from "../pages/task1/Task1EdgeCases";
-import Task1WrapUp from "../pages/task1/Task1WrapUp";
+import Task1Context from "./pages/task1/Task1Context";
+import Task1Simulation from "./pages/task1/Task1Simulation";
+import Task1EdgeCases from "./pages/task1/Task1EdgeCases";
+import Task1WrapUp from "./pages/task1/Task1WrapUp";
 
-import Task2Context from "../pages/task2/Task2Context";
-import Task2Simulation from "../pages/task2/Task2Simulation";
-import Task2EdgeCases from "../pages/task2/Task2EdgeCases";
-import Task2WrapUp from "../pages/task2/Task2WrapUp";
+import Task2Context from "./pages/task2/Task2Context";
+import Task2Simulation from "./pages/task2/Task2Simulation";
+import Task2EdgeCases from "./pages/task2/Task2EdgeCases";
+import Task2WrapUp from "./pages/task2/Task2WrapUp";
 
-import Task3Context from "../pages/task3/Task3Context";
-import Task3Simulation from "../pages/task3/Task3Simulation";
-import Task3EdgeCases from "../pages/task3/Task3EdgeCases";
-import Task3WrapUp from "../pages/task3/Task3WrapUp";
+import Task3Context from "./pages/task3/Task3Context";
+import Task3Simulation from "./pages/task3/Task3Simulation";
+import Task3EdgeCases from "./pages/task3/Task3EdgeCases";
+import Task3WrapUp from "./pages/task3/Task3WrapUp";
 
-import Task4Context from "../pages/task4/Task4Context";
-import Task4Simulation from "../pages/task4/Task4Simulation";
-import Task4EdgeCases from "../pages/task4/Task4EdgeCases";
-import Task4WrapUp from "../pages/task4/Task4WrapUp";
+import Task4Context from "./pages/task4/Task4Context";
+import Task4Simulation from "./pages/task4/Task4Simulation";
+import Task4EdgeCases from "./pages/task4/Task4EdgeCases";
+import Task4WrapUp from "./pages/task4/Task4WrapUp";
 
-import Task5Context from "../pages/task5/Task5Context";
-import Task5Simulation from "../pages/task5/Task5Simulation";
-import Task5EdgeCases from "../pages/task5/Task5EdgeCases";
-import Task5WrapUp from "../pages/task5/Task5WrapUp";
+import Task5Context from "./pages/task5/Task5Context";
+import Task5Simulation from "./pages/task5/Task5Simulation";
+import Task5EdgeCases from "./pages/task5/Task5EdgeCases";
+import Task5WrapUp from "./pages/task5/Task5WrapUp";
 
-import Task6Context from "../pages/task6/Task6Context";
-import Task6Simulation from "../pages/task6/Task6Simulation";
-import Task6EdgeCases from "../pages/task6/Task6EdgeCases";
-import Task6WrapUp from "../pages/task6/Task6WrapUp";
+import Task6Context from "./pages/task6/Task6Context";
+import Task6Simulation from "./pages/task6/Task6Simulation";
+import Task6EdgeCases from "./pages/task6/Task6EdgeCases";
+import Task6WrapUp from "./pages/task6/Task6WrapUp";
 
 function App() {
   return (
    <Layout>
     <Routes>
       <Route path='/' element={<Home />}></Route>
-      <Route path='/tasks' element={<Tasks />}></Route>
+      <Route path='/taken' element={<Tasks />}></Route>
 
       <Route path="/taak/1/context" element={<Task1Context />} />
       <Route path="/taak/1/simulatie" element={<Task1Simulation />} />
