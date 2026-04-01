@@ -24,6 +24,7 @@ export const students = [
   "Rekenen",
   "Scheikunde",
   "Spaans",
+  "Spelling & Taal",
   "Wiskunde",
   "Wiskunde A",
   "Wiskunde B",
