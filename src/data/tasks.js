@@ -1,7 +1,7 @@
 export const tasks = [
-// 🔥 1. LES AFSPREKEN
+// 📅 1. LES AFSPREKEN
   {
-    id: "afspraak",
+    id: "plannen",
     title: "Les afspreken",
     steps: [
     {
@@ -30,7 +30,7 @@ export const tasks = [
       }
     ]
   },
- // 🔥 2. LES DOORGEVEN
+ //📱 2. LES DOORGEVEN
   {
     id: "doorgeven",
     title: "Les doorgeven aan administratie",
@@ -68,14 +68,46 @@ export const tasks = [
     ]
   },
 
-  // 📱 3. MEDEWERKERS APP
+  // ✅ 3. Lesoverzicht en urenregistratie in de medewerkersapp
   {
     id: "app",
-    title: "Medewerkers app gebruiken",
+    title: "Lesoverzicht en urenregistratie in de medewerkersapp",
     steps: [
       {
         type: "intro",
         content: "De les is ingepland en staat in de medewerkers-app (alleen mobiel)."
+      },
+      {
+        type: "simulation",
+        component: "MobileAppSim"
+      },
+      {
+        type: "choices",
+        question: "Hoe controleer je je uren aan het einde van de maand?",
+        options: [
+          "Ik heb een lijstje in word/notities",
+          "Mijn agenda",
+          "Via de appjes richting de administratie",
+          "Via de lessen in het lvs",
+          "Ik ga ervan uit dat het klopt",
+          "Anders, namelijk..."
+        ]
+      },
+      {
+        type: "reflection",
+        question: "Wat vind je onhandig aan deze manier van werken?"
+      }
+    ]
+  },
+
+  // 🖊️ 4. Les wijzigen of verwijderen
+  {
+    id: "wijzigen",
+    title: "Les wijzigen of verwijderen",
+    steps: [
+      {
+        type: "intro",
+        content: "Je wil een les wijzigen of verwijderen."
       },
       {
         type: "simulation",
@@ -108,7 +140,7 @@ export const tasks = [
     ]
   },
 
-  // ⏰ 4. LES GEVEN + HERINNERING
+  // 🔔 5. LES GEVEN + HERINNERING
   {
     id: "les-geven",
     title: "Les geven & herinneringen",
@@ -143,7 +175,7 @@ export const tasks = [
     ]
   },
 
-  // 💻 5. LVS
+  // 💻 6. LVS
   {
     id: "lvs",
     title: "Les invoeren in LVS",
@@ -192,7 +224,7 @@ export const tasks = [
       }
     ]
   },
-    // ❌ 6. Leerling afwezig melden
+    // ❌ 7. Leerling afwezig melden
   {
     id: "afwezig",
     title: "Leerling afwezig melden",
