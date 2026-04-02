@@ -115,12 +115,14 @@ img {
 a,
 a:visited {
     color: var(--primary-dark);
+    font-size: 16px;
     letter-spacing: 0.125rem;
     font-weight: 500;
 }
 
 a:hover {
     color: var(--secondary-orange);
+    font-size: 16px;
     font-weight: 600;
 }
 

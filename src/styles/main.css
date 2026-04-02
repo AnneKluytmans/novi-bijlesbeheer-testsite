@@ -83,3 +83,23 @@ li {
 .primary-button:hover {
   opacity: 0.8;
 }
+
+.tasks-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.task-nav-link {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: #f1f3f5;
+  font-weight: 500;
+}
+
+.task-nav-link.active {
+  background: #878889;
+  font-weight: 700;
+}
