@@ -14,12 +14,12 @@ export const tasks = [
   {
     id: 3,
     title: "Les wijzigen/vewijderen",
-    shortDescription: "Hoe wijzig of verwijder je een les uit het systeem?",
+    shortDescription: "Hoe wijzig of verwijder je een les uit de app?",
     steps: ["context", "simulatie", "edge-cases", "afronding"],
   },
   {
     id: 4,
-    title: "Urenregistratie medewerkersapp",
+    title: "Uren bevestigen in de medewerkersapp",
     shortDescription: "Hoe bevestig je je uren in de app?",
     steps: ["context", "simulatie", "edge-cases", "afronding"],
   },

@@ -11,11 +11,12 @@ export default function Tasks() {
         </h4>
 
         {tasks.map((task) => (
-            <div key={task.id} style={{ marginBottom: "20px" }}>
+            <div key={task.id} style={{ marginBottom: "20px" }} className='section'>
                 <h3>{task.title}</h3>
+                <p>{task.shortDescription}</p>
 
                 <Link to={`/taak/${task.id}/context`}>
-                    <button>Start taak</button>
+                    <button className='primary-button'>Start taak</button>
                 </Link>
             </div>
         ))}

@@ -34,7 +34,7 @@ export default function Home() {
         </ul>
       
         <p>
-          Daarna lopen we de taak samen door en neem je me hardop mee in wat je doet.
+          Daarna lopen we de taak samen door en neem je me hardop mee in wat je doet, denkt en opvalt.
         </p>
       </div>
 
@@ -43,7 +43,7 @@ export default function Home() {
         <ul>
           <li>Er zijn geen goede of foute antwoorden</li>
           <li>Voer de taken uit op jouw manier</li>
-          <li>Probeer je in te beelden dat je de taak echt uitvoert</li>
+          <li>Probeer je in te beelden dat je de taak echt aan het uitvoeren bent</li>
         </ul>
       </div>
 
