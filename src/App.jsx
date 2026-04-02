@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Tasks from './pages/Tasks'
+import Test from './pages/Test'
 
 import Task1Context from "./pages/task1/Task1Context";
 import Task1Simulation from "./pages/task1/Task1Simulation";
@@ -39,6 +40,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />}></Route>
       <Route path='/taken' element={<Tasks />}></Route>
+      <Route path='/test' element={<Test />}></Route>
 
       <Route path="/taak/1/context" element={<Task1Context />} />
       <Route path="/taak/1/simulatie" element={<Task1Simulation />} />

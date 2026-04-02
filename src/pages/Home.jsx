@@ -5,6 +5,7 @@ export default function Home() {
 
   return (
     <div className="home">
+      
       <h1 className="title">Welkom bij deze contextuele observatie 👋</h1>
 
       <p>
